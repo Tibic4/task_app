@@ -1,7 +1,7 @@
-h1 タスクの新規登録
+h1 New Task
 
 .nav.justify-content-end
-  = link_to "一覧", tasks_path, class: "nav-link"
+  = link_to "List", tasks_path, class: "nav-link"
 
 = form_with model: @task, local: true do |f|
   .form-group
@@ -10,4 +10,4 @@ h1 タスクの新規登録
   .form-group
     = f.label :description
     = f.text_area :description, rouw: 5, class: "form-control", id: "task_description"
-  = f.submit "登録する", class: "btn btn-primary"
+  = f.submit "Create Task", class: "btn btn-primary"
