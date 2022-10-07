@@ -15,5 +15,6 @@ pt-BR:
         id: ID
         name: Nome
         description: Descrição
+        edit: Editar
         created_at: Criado em
         updated_at: Atualizado em
