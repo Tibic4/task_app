@@ -1,16 +1,22 @@
-h1 Tasks
+h1 Task List
 
-= link_to "New Task", new_task_path, class: "btn btn-primary"
-
-
+= link_to "New", new_task_path, class: "btn btn-primary"
 .mb-3
 table.table.table-hover
   thead.thead-default
     tr
-      th= Task.human_attribute_name(:name)
-      th= Task.human_attribute_name(:created_at)
+      th
+        = Task.human_attribute_name(:name)
+      th
+        = Task.human_attribute_name(:created_at)
+      th
+        | 編集
   tbody
     - @tasks.each do |task|
       tr
-        td= link_to task.name, task_path(task)
-        td= task.created_at
+        td
+          = link_to task.name, task_path(task)
+        td
+          = task.created_at
+        td
+          = link_to "Edit", edit_task_path(task), class: "btn btn-primary mr-3"
